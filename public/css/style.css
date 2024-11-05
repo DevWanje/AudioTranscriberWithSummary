@@ -1,0 +1,202 @@
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.playlist {
+    padding: 20px;
+    border-radius: 15px 0 0 65px;
+    background-color: #303e4b;
+    height: 100%;
+    width: 100%;
+}
+.playlist ul {
+    list-style: none;
+    padding: 0;
+}
+.playlist li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 15px;
+    border-bottom: 1px solid #424e58;
+}
+.playlist li:hover {
+    background-color: #293744;
+}
+.active-track {
+    background-color: #303e4b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.download-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.musicPlayer {
+    width: 70%;
+    border-radius: 8px;
+    display: flex;
+    background-color: #ddd;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.deck {
+    text-align: center;
+    padding: 20px;
+}
+
+#fileInput {
+    display: none;
+}
+
+#fileList {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Style the label as a button */
+.custom-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the label */
+.custom-file-label:hover {
+    background-color: #4CAF50;
+}
+#fetchFiles{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+#files{
+    text-align: left;
+}
+
+#addFilesButton {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #e70b0b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.transcription-buttons{
+    margin-top: 20px;
+}
+
+body{
+    margin: 0;
+    font-family: Arial;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    background-color: rgb(214, 200, 7);
+    width: 100%;
+    display: flex;
+}
+
+.logo{
+    padding: 10px;
+    width: 15%;
+}
+
+#logo{
+    width: 120px;
+    height: 100px;
+}
+
+.navbar {
+    float: right;
+    padding: 20px;
+    width: 85%;
+    text-align: right;
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.progress-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#progressBar {
+    appearance: none;
+    background: #4CAF50;
+    height: 5px;
+}
+
+.transcription{
+    width: 90%;
+    border-radius: 8px;
+    display: flex;
+    background-color: #ddd;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 20px;
+    bottom: 20px;
+}
+
+.transcription-output{
+    width: 50%;
+    margin: 20px;
+    font-size: 13px;
+}
+
+.summary-output{
+    width: 50%;
+    margin: 20px;
+    font-size: 13px;
+}
+
+footer {
+background-color: rgb(214, 200, 7); /* Light gray background */
+color: #333; /* Dark gray text color */
+padding: 20px; /* Padding around the text */
+text-align: center; /* Center the text */
+position: fixed; /* Relative positioning for further adjustments if needed */
+bottom: 0; /* Position at the bottom of its container */
+width: 100%; /* Full width */
+box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow above the footer */
+}
+
+/* Style for footer text */
+#footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Adjust font size */
+}
