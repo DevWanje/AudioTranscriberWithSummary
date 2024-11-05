@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3-Player</title>
+    <link rel="icon" href="img/Keimow_Cyber_Service_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img id="logo" src="img/Keimow_Cyber_Service_logo.png" alt="">
+        </div>
+        <nav class="navbar">
+            <a href="index.html">MP3-Player</a>
+            <a href="text-to-speech.html">Text to Speech</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="musicPlayer">
+        <div class="deck">
+            <audio id="audioPlayer"></audio>
+            <div class="controls">
+                <button id="prevButton">Previous</button>
+                <button id="playPauseButton">Play</button>
+                <button id="nextButton">Next</button>
+                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+                <span id="volumeLabel">Volume: 100%</span>
+            </div>
+            <div class="progress-container">
+                <input type="range" id="progressBar" min="0" max="100" value="0" style="width: 100%;">
+            </div>
+
+            <p id="trackInfo"></p>
+
+            <div class="transcription-buttons">
+                <button type="button" id="transcriptionButton">Transcribe Audio</button>
+                <button type="button" id="downloadTranscription" disabled>Download Transcription</button>
+            </div>
+            
+            <div id="fetchFiles">
+                <div id="files">
+                    <label for="fileInput" class="custom-file-label">Add Files</label>
+                    <input type="file" id="fileInput" accept="audio/*" multiple>
+                </div>
+                <div id="addToPL">
+                    <button id="addFilesButton">Add to Playlist</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <input type="text" id="filterInput" placeholder="Filter playlist..." style="width: 90%; padding: 10px; margin-bottom: 10px;">
+            <div id="fileList"></div>
+            <ul id="playlistDisplay"></ul>
+        </div>
+    </div>
+
+    <div class="transcription">
+        <!-- New divs for transcribed text and summary display -->
+        <div class="transcription-output">
+            <h3>Transcription</h3>
+            <div id="transcriptionText">No transcription available yet.</div>
+            <button id="downloadTranscriptionPdf" hidden>Download Transcription as PDF</button>
+        </div>
+        
+        <div class="summary-output">
+            <h3>Summary</h3>
+            <div id="summaryText">No summary available yet.</div>
+            <button id="downloadSummaryPdf" hidden>Download Summary as PDF</button>
+        </div>
+        
+    </div>
+    <footer>
+        <div id="footer">
+            <p>&copy; 2024 All rights reserved. Moses Wanje</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
